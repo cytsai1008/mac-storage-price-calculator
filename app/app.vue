@@ -90,6 +90,8 @@ const option = computed(() => list.value.find(o => o.id === selected.value)!)
                 v-model="amount"
                 :min="0"
                 :step="unit === 'TB' ? 1 : 100"
+                :step-snapping="false"
+                :format-options="{ maximumFractionDigits: 3 }"
                 class="w-full"
               />
               <USelect
